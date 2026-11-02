@@ -1,0 +1,39 @@
+# Generated media and subtitles
+/output/*
+!/output/.gitkeep
+*.mp4
+*.mkv
+*.mov
+*.avi
+*.webm
+*.m4v
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.srt
+
+# Environments and Python caches
+.venv/
+venv/
+.conda_env/
+conda_env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Developer settings / secrets
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Temporary output
+*.tmp
+*.log

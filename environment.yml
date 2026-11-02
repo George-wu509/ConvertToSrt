@@ -1,0 +1,10 @@
+name: sub_env
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - pip
+  - ffmpeg
+  # Keep Qt/PySide6 in conda to reduce mixed Qt DLL conflicts on Windows.
+  - "pyside6>=6.7,<7"

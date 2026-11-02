@@ -1,0 +1,43 @@
+ToSub - Quick Start (Windows)
+=============================
+
+WHAT IT DOES
+1. Extract audio (MP4/video -> 16 kHz WAV).
+2. Transcribe English speech into an English SRT subtitle file.
+3. Translate an English SRT into Traditional Chinese SRT.
+
+FIRST-TIME INSTALLATION
+1. Install Miniconda or Anaconda.
+2. Unzip this project into a folder such as C:\tools\tosub.
+3. Double-click build_sub_env.bat.
+   If it cannot find Conda, run it from Anaconda Prompt.
+4. Wait for the script to complete and check that the verification passes.
+
+EVERY TIME YOU WANT TO RUN
+- Double-click run_app_sub_env.bat.
+- Choose a media file.
+- Click Extract Audio (optional), Speech -> English SRT, and
+  English SRT -> Chinese SRT, in that order.
+- You can also choose an English SRT directly and translate it.
+
+COMMAND-LINE ALTERNATIVE
+  cd /d C:\tools\tosub
+  conda env create -n sub_env -f environment.yml
+  conda activate sub_env
+  python -m pip install -r requirements.txt
+  python app.py
+
+OUTPUTS
+- Saved under tosub\output\
+- .wav audio, _en.srt English, _zh.srt Traditional Chinese,
+  _zh_translation_report.txt translation summary and any untranslated lines.
+
+IMPORTANT NOTES
+- PySide6 is installed by Conda via environment.yml, NOT by pip.
+- Speech recognition runs on CPU by default to avoid CUDA DLL errors.
+- First-time Whisper model downloads require internet.
+- Google/MyMemory subtitle translation requires internet and can fail or be
+  rate-limited. The app keeps untranslated English lines and logs them.
+- Do not send sensitive subtitles to third-party translation services.
+
+See README.md for full instructions and troubleshooting.
